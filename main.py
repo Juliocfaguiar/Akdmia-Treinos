@@ -1,20 +1,10 @@
 import streamlit as st
 import pandas as pd
-import sqlite3
 from io import BytesIO
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from pdf import gerar_pdf
 
-conn = sqlite3.connect('Treinos.db')
-
-
-cursor = conn.cursor()
-
-
-# Salva as alterações e fecha a conexão
-conn.commit()
-conn.close()
 
 col1,col2,col3 = st.columns([1, 1, 1])
 with col2:
