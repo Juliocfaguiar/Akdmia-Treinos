@@ -6,67 +6,64 @@ from reportlab.lib.pagesizes import letter
 
 # Função para gerar o PDF
 
-def gerar_pdf(resultado):
+def gerar_pdf(dados_treino):
     """
     Gera um PDF com os Treinos selecionados.
     """
     buffer = BytesIO()
     pdf = canvas.Canvas(buffer, pagesize=letter)
+    width, height = letter
+    # Defina a cor de fundo (por exemplo, azul claro)
+    # pdf.setFillColorRGB(0.3, 0.3, 0.3)  # RGB entre 0 e 1
+    # pdf.rect(0, 0, width, height, fill=1, stroke=0)  # Desenha o fundo
     pdf.setFont("Times-Roman", 12)
-    pdf.drawString(50, 750, "Poder Judiciário")
-    pdf.drawString(50, 735, "Sentença Criminal Definitiva")
-    pdf.drawString(50, 720, "-" * 80)
-
-    # Cabeçalho e Dados do Réu
-    y = 700
-    pdf.drawString(50, y, f"Acusado: {resultado[3]}  CPF: {resultado[8]}")
-    # y -= 20
-    # pdf.drawString(50, y, f"CPF: {resultado[8]}")
-    y -= 20
-    pdf.drawString(50, y, f"Endereço: {resultado[9]}, {resultado[10]}, {resultado[11]}, {resultado[12]}, {resultado[13]}")
-    y -= 30
-
-    # Corpo da sentença
-    sentenca = f"""
-        Vistos etc.
-        
-        O Ministério Público ofereceu denúncia contra {resultado[3]},{resultado[4]}, {resultado[5]},
-        nascido(a) em {resultado[6]},profissão:{resultado[7]}, portador(a) do CPF {resultado[8]},
-        residente à {resultado[9]}, {resultado[10]} - {resultado[11]},{resultado[12]} - {resultado[13]},
-        pela prática do crime previsto no artigo {resultado[16]} do Código Penal conforme os fatos 
-        narrados na denúncia.
-        
-        Recebida a denúncia e realizada a instrução processual, entendo que restou comprovada a
-        materialidade e autoria do delito, não havendo causas excludentes da ilicitude ou culpabilidade.
-        
-        Dessa forma, passo à dosimetria da pena, nos termos do art. 59 do Código Penal.
-        
-        Pena provisória fixada em: {pena_provisoria_pdf}
-        Pena definitiva fixada em: {pena_definitiva_pdf}
-        
-        Ante o exposto, JULGO PROCEDENTE a pretensão punitiva estatal para CONDENAR o(a) 
-        réu {resultado[3]}, como incurso nas sanções do art. {resultado[16]} do Código Penal, 
-        à pena de {pena_definitiva_pdf} a ser cumprida em regime inicialmente adequado,
-        nos termos do art. 33 do Código Penal.
-        
-        Publique-se. Registre-se. Intime-se.
-        
-        Local _________________________, Data _____/_________/________
-        
-        Juiz(a) de Direito
+    y = 700  # Posição inicial vertical
 
 
-        ________________________________________________________
+    pdf.drawImage("Logo akdmia do joel.png", x=20, y=650, width=150, height=100)
+    pdf.drawImage("Logo akdmia do joel.png", x=430, y=650, width=150, height=100)
+    pdf.drawImage("fichadetreino.png", x=150, y=600, width=300, height=100)
+
+
+
+    treino = f"""
+
+    
+
+    
                 """
+     # Defina as posições iniciais (x, y) para cada grupo
+    grupos = [
+        ("Quadríceps", 0, 50, 550),
+        ("Posterior de Coxa + Glúteos", 4, 350, 550),
+        ("Peito", 8, 50, 430),
+        ("Costas", 12, 350, 430),
+        ("Ombro", 16, 50, 310),
+        ("Tríceps", 20, 350, 310),
+        ("Bíceps", 24, 225, 190)
+    ]
 
-    # Escrevendo a sentença linha por linha
-    for linha in sentenca.strip().split("\n"):
-        pdf.drawString(50, y, linha.strip())  # Desenha a linha no PDF
-        y -= 15  # Move a posição vertical para baixo
-        if y < 50:  # Verifica se chegou ao fim da página
-            pdf.showPage()  # Cria uma nova página
-            pdf.setFont("Times-Roman", 12)  # Redefine a fonte
-            y = 750  # Reinicia a posição vertical no topo da nova página
+    for grupo, inicio, x, y in grupos:
+        pdf.setFont("Times-Bold", 18)
+        pdf.drawString(x, y, grupo)
+        y -= 25  # Espaçamento entre o título do grupo e os exercícios
+        pdf.setFont("Times-Roman", 12)
+        for i in range(inicio, inicio+4):
+            exercicio = dados_treino.get(f"exercicio{i+1}", "")
+            series = dados_treino.get(f"series{i+1}", "")
+            pdf.drawString(x + 10, y, f"{exercicio} - {series}")
+            y -= 20  # Ajuste o espaçamento entre as linhas conforme necessário
+
+
+
+    #  # Exemplo de uso dos dados:
+    # for i in range(0, 29):  # ajuste o range conforme o número de exercícios
+    #     exercicio = dados_treino.get(f"exercicio{i}", "")
+    #     series = dados_treino.get(f"series{i}", "")
+    #     pdf.drawString(50, y, f"{exercicio} - {series}")
+    #     y -= 20 # Ajuste o espaçamento entre as linhas conforme necessário
+
+
 
     pdf.save()
     buffer.seek(0)

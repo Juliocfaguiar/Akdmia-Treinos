@@ -56,7 +56,7 @@ with col9:
 
 quadriceps = ["Agachamento livre", "Agachamento frontal", "Agachamento baixo", "Agachamento alto", "Agachamento no Smith", "Agachamento frontal no Smith", "Agachamento com pausa", "Agachamento búlgaro", "Recuo com halteres", "Avanço com halteres", "Step-up com halteres", "Agachamento búlgaro com halteres", "Agachamento com elevação de calcanhar", "Agachamento sumô", "Leg press 45°", "Leg press 45º com os pés juntos", "Leg press 90°", "Leg press unilateral", "Cadeira extensora", "Cadeira extensora unilateral", "Cadeira extensora com isometria", "Hack machine", "Hack machine reverso", "Smith machine", "Smith machine Frontal", "Agachamento livre", "Agachamento com salto", "Duck walk"]
 
-posteriorCoxa = ["Stiff com barra", "Stiff com halteres", "Stiff unilateral com halteres", "Afundo com halteres", "Terra com pernas rígidas", "Bom dia com barra", "Flexão nórtica", "Mesa flexora", "Cadeira flexora", "Flexora em pé", "Elevação pélvica", "Leg press 45º com os pés altos", "Hack machine com os pés altos"]
+posteriorCoxa = ["Stiff com barra", "Stiff com halteres", "Stiff unilateral com halteres", "Afundo com halteres", "Terra com pernas rígidas", "Bom dia com barra", "Flexão nórtica", "Mesa flexora", "Cadeira flexora", "Flexora em pé", "Elevação pélvica", "Leg press 45º com os pés altos", "Hack machine com os pés altos", "Extensão de quadril com tornozeleira", "Extensão de quadril no banco",  "Extensão de quadril no cross", "Elevação pélvica unilateral", "Abdução de quadril em pé", "Abdução de quadril deitada", "cadeira abdutora", "cadeira adutora", "Chute para trás no cross","Chute lateral no cross", "Chute para trás com caneleira", "Chute lateral com caneleira", "Afundo no step", "Passada lateral", "Passada cruzada", "Passada cruzada com halteres", "Agachamento frog pump", "Fire hydrant", "Donkey kicks com caneleira"]
 
 peito=["Supino reto com barra", "Supino inclinado com barra", "Supino declinado com barra", "Supino reto com pegada fechada", "Supino reto com halteres", "Supino inclinado com halteres", "Supino declinado com halteres", "Crucifixo reto com halteres", "Crucifixo inclinado com halteres", "Crucifixo declinado com halteres", "Supino com giro", "Pec deck", "peck deck unilateral", "Máquina com pegada neutra", "Cross-over alto", "Cross-over baixo", "Cross-over na linha do peito", "Crucifixo com polia baixa", "Crucifixo com polia alta"]
 
@@ -98,7 +98,7 @@ if st.session_state.get("Individual", True):
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series4")
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Posterior de Coxa",divider="gray")
+    st.subheader("Posterior de Coxa + Clúteos",divider="gray")
     col1,col2 = st.columns([1, 0.25])
     with col1:
         primeiro = st.selectbox("Exercício 1", options= posteriorCoxa, key="exercicio5")
@@ -254,23 +254,87 @@ if st.session_state.get("Individual", True):
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series28")
 
 
-# # Botão para gerar e baixar o PDF
-# if st.button("Gerar PDF", type="primary", use_container_width=True):
-#     if "resultado" in st.session_state and st.session_state.resultado:
-#         resultado = st.session_state.resultado               
-#         pena_provisoria_pdf = st.session_state.provisorio_pdf if "provisorio" in st.session_state else "Não calculada"            
-#         pena_definitiva_pdf = st.session_state.pena_final_com_detração_pdf if "pena_final_com_detração" in st.session_state else "Não calculada"
 
-#         # Gera o PDF
-#         pdf_buffer = gerar_pdf(resultado, pena_provisoria_pdf, pena_definitiva_pdf).getvalue()
-        
-#         # Botão para download do PDF
-#         st.download_button(
-#             label="Baixar PDF",
-#             data=pdf_buffer,
-#             file_name="relatorio_sentenca.pdf",
-#             mime="application/pdf",
-#             key="download_pdf_button"
-#         )
-#     else:
-#         st.error("Por favor, realize o cálculo da pena antes de gerar o PDF.")
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+
+
+dados_treino = {
+    "exercicio1": st.session_state.get("exercicio1"),
+    "series1": st.session_state.get("series1"),
+    "exercicio2": st.session_state.get("exercicio2"),
+    "series2": st.session_state.get("series2"),
+    "exercicio3": st.session_state.get("exercicio3"),
+    "series3": st.session_state.get("series3"),
+    "exercicio4": st.session_state.get("exercicio4"),
+    "series4": st.session_state.get("series4"),
+    "exercicio5": st.session_state.get("exercicio5"),
+    "series5": st.session_state.get("series5"),
+    "exercicio6": st.session_state.get("exercicio6"),
+    "series6": st.session_state.get("series6"),
+    "exercicio7": st.session_state.get("exercicio7"),
+    "series7": st.session_state.get("series7"),
+    "exercicio8": st.session_state.get("exercicio8"),
+    "series8": st.session_state.get("series8"),
+    "exercicio9": st.session_state.get("exercicio9"),
+    "series9": st.session_state.get("series9"),
+    "exercicio10": st.session_state.get("exercicio10"),
+    "series10": st.session_state.get("series10"),
+    "exercicio11": st.session_state.get("exercicio11"),
+    "series11": st.session_state.get("series11"),
+    "exercicio12": st.session_state.get("exercicio12"),
+    "series12": st.session_state.get("series12"),
+    "exercicio13": st.session_state.get("exercicio13"),
+    "series13": st.session_state.get("series13"),
+    "exercicio14": st.session_state.get("exercicio14"),
+    "series14": st.session_state.get("series14"),
+    "exercicio15": st.session_state.get("exercicio15"),
+    "series15": st.session_state.get("series15"),
+    "exercicio16": st.session_state.get("exercicio16"),
+    "series16": st.session_state.get("series16"),
+    "exercicio17": st.session_state.get("exercicio17"),
+    "series17": st.session_state.get("series17"),
+    "exercicio18": st.session_state.get("exercicio18"),
+    "series18": st.session_state.get("series18"),
+    "exercicio19": st.session_state.get("exercicio19"),
+    "series19": st.session_state.get("series19"),
+    "exercicio20": st.session_state.get("exercicio20"),
+    "series20": st.session_state.get("series20"),
+    "exercicio21": st.session_state.get("exercicio21"),
+    "series21": st.session_state.get("series21"),
+    "exercicio22": st.session_state.get("exercicio22"),
+    "series22": st.session_state.get("series22"),
+    "exercicio23": st.session_state.get("exercicio23"),
+    "series23": st.session_state.get("series23"),
+    "exercicio24": st.session_state.get("exercicio24"),
+    "series24": st.session_state.get("series24"),
+    "exercicio25": st.session_state.get("exercicio25"),
+    "series25": st.session_state.get("series25"),
+    "exercicio26": st.session_state.get("exercicio26"),
+    "series26": st.session_state.get("series26"),
+    "exercicio27": st.session_state.get("exercicio27"),
+    "series27": st.session_state.get("series27"),
+    "exercicio28": st.session_state.get("exercicio28"),
+    "series28": st.session_state.get("series28"),
+}
+st.session_state["dados_treino"] = dados_treino
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+
+
+# Botão para gerar PDF
+if st.button("Gerar PDF"):
+    from pdf import gerar_pdf
+    gerar_pdf(st.session_state["dados_treino"])
+
+
+pdf_buffer = gerar_pdf(dados_treino).getvalue()
+
+#  Botão para download do PDF
+
+st.download_button(
+    label="Baixar PDF",
+    data=pdf_buffer,
+    file_name="FichaTreino.pdf",
+    mime="pdf",
+    key="download_pdf_button"
+        )
