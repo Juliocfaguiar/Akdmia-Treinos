@@ -769,6 +769,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 3", options=peito, key="exercicio11")
         segundo = st.selectbox("", options=peito, key="exercicio011")
+        segundo = st.selectbox("", options=peito, key="exercicio0011")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series11")
 
@@ -776,6 +777,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 4", options=peito, key="exercicio12")
         segundo = st.selectbox("", options=peito, key="exercicio012")
+        segundo = st.selectbox("", options=peito, key="exercicio0012")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series12")
 
@@ -785,6 +787,7 @@ if st.session_state.get("Triset", True):
     with col1:
         primeiro = st.selectbox("Exercício 1", options= costas, key="exercicio13")
         primeiro = st.selectbox("", options= costas, key="exercicio013")
+        primeiro = st.selectbox("", options= costas, key="exercicio0013")
     with col2:
         primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series13")
     
@@ -792,6 +795,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 2", options=costas, key="exercicio14")
         segundo = st.selectbox("", options=costas, key="exercicio014")
+        segundo = st.selectbox("", options=costas, key="exercicio0014")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series14")
 
@@ -799,6 +803,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 3", options=costas, key="exercicio15")
         segundo = st.selectbox("", options=costas, key="exercicio015")
+        segundo = st.selectbox("", options=costas, key="exercicio0015")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series15")
 
@@ -806,6 +811,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 4", options=costas, key="exercicio16")
         segundo = st.selectbox("4", options=costas, key="exercicio016")
+        segundo = st.selectbox("4", options=costas, key="exercicio0016")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series16")
 
@@ -815,6 +821,7 @@ if st.session_state.get("Triset", True):
     with col1:
         primeiro = st.selectbox("Exercício 1", options= ombros, key="exercicio17")
         primeiro = st.selectbox("", options= ombros, key="exercicio017")
+        primeiro = st.selectbox("", options= ombros, key="exercicio0017")
     with col2:
         primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series17")
     
@@ -822,6 +829,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 2", options=ombros, key="exercicio18")
         segundo = st.selectbox("", options=ombros, key="exercicio018")
+        segundo = st.selectbox("", options=ombros, key="exercicio0018")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series18")
 
@@ -829,6 +837,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 3", options=ombros, key="exercicio19")
         segundo = st.selectbox("", options=ombros, key="exercicio019")
+        segundo = st.selectbox("", options=ombros, key="exercicio0019")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series19")
 
@@ -836,6 +845,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 4", options=ombros, key="exercicio20")
         segundo = st.selectbox("", options=ombros, key="exercicio020")
+        segundo = st.selectbox("", options=ombros, key="exercicio0020")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series20")
 
@@ -845,6 +855,7 @@ if st.session_state.get("Triset", True):
     with col1:
         primeiro = st.selectbox("Exercício 1", options= triceps, key="exercicio21")
         primeiro = st.selectbox("", options= triceps, key="exercicio021")
+        primeiro = st.selectbox("", options= triceps, key="exercicio0021")
     with col2:
         primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series21")
     
@@ -852,6 +863,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 2", options=triceps, key="exercicio22")
         segundo = st.selectbox("", options=triceps, key="exercicio022")
+        segundo = st.selectbox("", options=triceps, key="exercicio0022")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series22")
 
@@ -859,6 +871,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 3", options=triceps, key="exercicio23")
         segundo = st.selectbox("", options=triceps, key="exercicio023")
+        segundo = st.selectbox("", options=triceps, key="exercicio0023")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series23")
 
@@ -866,6 +879,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 4", options=triceps, key="exercicio24")
         segundo = st.selectbox("", options=triceps, key="exercicio024")
+        segundo = st.selectbox("", options=triceps, key="exercicio0024")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series24")
 
@@ -875,6 +889,7 @@ if st.session_state.get("Triset", True):
     with col1:
         primeiro = st.selectbox("Exercício 1", options= biceps, key="exercicio25")
         primeiro = st.selectbox("", options= biceps, key="exercicio025")
+        primeiro = st.selectbox("", options= biceps, key="exercicio0025")
     with col2:
         primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series25")
     
@@ -882,6 +897,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 2", options=biceps, key="exercicio26")
         segundo = st.selectbox("", options=biceps, key="exercicio026")
+        segundo = st.selectbox("", options=biceps, key="exercicio0026")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series26")
 
@@ -889,6 +905,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 3", options=biceps, key="exercicio27")
         segundo = st.selectbox("", options=biceps, key="exercicio027")
+        segundo = st.selectbox("", options=biceps, key="exercicio0027")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series27")
 
@@ -896,6 +913,7 @@ if st.session_state.get("Triset", True):
     with col1:
         segundo = st.selectbox("Exercício 4", options=biceps, key="exercicio28")
         segundo = st.selectbox("", options=biceps, key="exercicio028")
+        segundo = st.selectbox("", options=biceps, key="exercicio0028")
     with col2:
         segundo_series = st.selectbox("Séries/Repetições", options=series, key="series28")
 
@@ -904,7 +922,7 @@ if st.session_state.get("Triset", True):
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
 
 
-    dados_treino2 = {
+    dados_treino3 = {
         "exercicio1": st.session_state.get("exercicio1"),
         "series1": st.session_state.get("series1"),
         "exercicio2": st.session_state.get("exercicio2"),
@@ -990,25 +1008,55 @@ if st.session_state.get("Triset", True):
         "exercicio026": st.session_state.get("exercicio026"),
         "exercicio027": st.session_state.get("exercicio027"),
         "exercicio028": st.session_state.get("exercicio028"),
+
+        "exercicio001": st.session_state.get("exercicio001"),
+        "exercicio002": st.session_state.get("exercicio002"),
+        "exercicio003": st.session_state.get("exercicio003"),
+        "exercicio004": st.session_state.get("exercicio004"),
+        "exercicio005": st.session_state.get("exercicio005"),
+        "exercicio006": st.session_state.get("exercicio006"),
+        "exercicio007": st.session_state.get("exercicio007"),
+        "exercicio008": st.session_state.get("exercicio008"),
+        "exercicio009": st.session_state.get("exercicio009"),
+        "exercicio0010": st.session_state.get("exercicio0010"),
+        "exercicio0011": st.session_state.get("exercicio0011"),
+        "exercicio0012": st.session_state.get("exercicio0012"),
+        "exercicio0013": st.session_state.get("exercicio0013"),
+        "exercicio0014": st.session_state.get("exercicio0014"),
+        "exercicio0015": st.session_state.get("exercicio0015"),
+        "exercicio0016": st.session_state.get("exercicio0016"),
+        "exercicio0017": st.session_state.get("exercicio0017"),
+        "exercicio0018": st.session_state.get("exercicio0018"),
+        "exercicio0019": st.session_state.get("exercicio0019"),
+        "exercicio0020": st.session_state.get("exercicio0020"),
+        "exercicio0021": st.session_state.get("exercicio0021"),
+        "exercicio0022": st.session_state.get("exercicio0022"),
+        "exercicio0023": st.session_state.get("exercicio0023"),
+        "exercicio0024": st.session_state.get("exercicio0024"),
+        "exercicio0025": st.session_state.get("exercicio0025"),
+        "exercicio0026": st.session_state.get("exercicio0026"),
+        "exercicio0027": st.session_state.get("exercicio0027"),
+        "exercicio0028": st.session_state.get("exercicio0028"),
+
     }
-    st.session_state["dados_treino"] = dados_treino2
+    st.session_state["dados_treino"] = dados_treino3
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
 
 
     # Botão para gerar PDF
     if st.button("Gerar PDF"):
-        from pdf import gerar_pdf2
-        gerar_pdf2(st.session_state["dados_treino"])
+        from pdf import gerar_pdf3
+        gerar_pdf3(st.session_state["dados_treino"])
 
 
-    pdf_buffer2 = gerar_pdf2(dados_treino2).getvalue()
+    pdf_buffer3 = gerar_pdf3(dados_treino3).getvalue()
 
     #  Botão para download do PDF
 
     st.download_button(
         label="Baixar PDF",
-        data=pdf_buffer2,
+        data=pdf_buffer3,
         file_name="FichaTreino.pdf",
         mime="pdf",
         key="download_pdf_button"
