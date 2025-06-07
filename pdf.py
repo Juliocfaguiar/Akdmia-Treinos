@@ -122,8 +122,8 @@ def gerar_pdf3(dados_treino3):
     y = 700  # Posição inicial vertical
 
 
-    pdf.drawImage("Logo akdmia do joel.png", x=20, y=690, width=150, height=100)
-    pdf.drawImage("Logo akdmia do joel.png", x=430, y=690, width=150, height=100)
+    pdf.drawImage("Logo akdmia do joel.jpg", x=20, y=690, width=150, height=100)
+    pdf.drawImage("Logo akdmia do joel.jpg", x=430, y=690, width=150, height=100)
     pdf.drawImage("fichadetreino.png", x=150, y=690, width=300, height=100)
 
     grupos = [
