@@ -68,7 +68,7 @@ triceps = ["francês unilateral com halteres", "Tríceps kickback com halteres",
 
 biceps = ["Rosca direta com barra reta", "Rosca direta com barra W", "Rosca 21", "Rosca no banco Scott", "Rosca no banco Scott alternado", "Rosca alternada com halteres", "Rosca simultânea com halteres", "Rosca martelo com halteres", "Rosca concentrada com halteres", "Rosca cruzada com halteres", "Rosca inclinada total", "Rosca inclinada alternada", "Rosca com corda na polia", "Rosca Zottman", "Rosca inversa com barra", "Rosca inversa com halteres", "Rosca de punho com barra", "Rosca de punho com halteres", "Rosca de punho invertida com halteres"]
 
-series = ["4*8","4*10","4*12","4*15","4*20","4*8~12","5*8","5*10","5*12","5*15","5*20","5*8~12"]
+series = ["4*8","4*10","4*12","4*15","4*20","4*8~12","5*8","5*10","5*12","5*15","5*20","5*8~12","6*8","6*10","6*12","6*15","6*20","6*8~12","7*8","7*10","7*12","7*15","7*20","7*8~12","8*8","8*10","8*12","8*15","8*20","8*8~12","9*8","9*10","9*12","9*15","9*20","9*8~12","10*8","10*10","10*12","10*15","10*20","10*8~12","1*200"]
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
 
