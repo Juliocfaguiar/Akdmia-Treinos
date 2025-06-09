@@ -20,8 +20,8 @@ def gerar_pdf1(dados_treino1):
     y = 700  # Posição inicial vertical
 
 
-    pdf.drawImage("Logo akdmia do joel.png", x=20, y=650, width=150, height=100)
-    pdf.drawImage("Logo akdmia do joel.png", x=430, y=650, width=150, height=100)
+    pdf.drawImage("Logo akdmia do joel.jpg", x=20, y=650, width=150, height=100)
+    pdf.drawImage("Logo akdmia do joel.jpg", x=430, y=650, width=150, height=100)
     pdf.drawImage("fichadetreino.png", x=150, y=650, width=300, height=100)
 
      # Defina as posições iniciais (x, y) para cada grupo
@@ -67,8 +67,8 @@ def gerar_pdf2(dados_treino2):
     y = 700  # Posição inicial vertical
 
 
-    pdf.drawImage("Logo akdmia do joel.png", x=20, y=650, width=150, height=100)
-    pdf.drawImage("Logo akdmia do joel.png", x=430, y=650, width=150, height=100)
+    pdf.drawImage("Logo akdmia do joel.jpg", x=20, y=650, width=150, height=100)
+    pdf.drawImage("Logo akdmia do joel.jpg", x=430, y=650, width=150, height=100)
     pdf.drawImage("fichadetreino.png", x=150, y=650, width=300, height=100)
 
    
