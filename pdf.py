@@ -20,19 +20,21 @@ def gerar_pdf1(dados_treino1):
     y = 700  # Posição inicial vertical
 
 
-    pdf.drawImage("Logo akdmia do joel.jpg", x=20, y=650, width=150, height=100)
-    pdf.drawImage("Logo akdmia do joel.jpg", x=430, y=650, width=150, height=100)
-    pdf.drawImage("fichadetreino.png", x=150, y=650, width=300, height=100)
+    # pdf.drawImage("Logo akdmia do joel.jpg", x=20, y=650, width=150, height=100)
+    # pdf.drawImage("Logo akdmia do joel.jpg", x=430, y=650, width=150, height=100)
+    # pdf.drawImage("fichadetreino.png", x=150, y=650, width=300, height=100)
+
+    pdf.drawImage("fundo01.jpg", 0, 0, width=width, height=height)
 
      # Defina as posições iniciais (x, y) para cada grupo
     grupos = [
-        ("Quadríceps", 0, 50, 550),
-        ("Posterior de Coxa + Glúteos", 4, 350, 550),
-        ("Peito", 8, 50, 430),
-        ("Costas", 12, 350, 430),
-        ("Ombro", 16, 50, 310),
-        ("Tríceps", 20, 350, 310),
-        ("Bíceps", 24, 225, 190)
+        ("Quadríceps", 0, 50, 650),
+        ("Posterior de Coxa + Glúteos", 4, 350, 650),
+        ("Peito", 8, 50, 500),
+        ("Costas", 12, 350, 500),
+        ("Ombro", 16, 50, 350),
+        ("Tríceps", 20, 350, 350),
+        ("Bíceps", 24, 225, 200)
     ]
 
     for grupo, inicio, x, y in grupos:
@@ -67,20 +69,22 @@ def gerar_pdf2(dados_treino2):
     y = 700  # Posição inicial vertical
 
 
-    pdf.drawImage("Logo akdmia do joel.jpg", x=20, y=650, width=150, height=100)
-    pdf.drawImage("Logo akdmia do joel.jpg", x=430, y=650, width=150, height=100)
-    pdf.drawImage("fichadetreino.png", x=150, y=650, width=300, height=100)
+    # pdf.drawImage("Logo akdmia do joel.jpg", x=20, y=650, width=150, height=100)
+    # pdf.drawImage("Logo akdmia do joel.jpg", x=430, y=650, width=150, height=100)
+    # pdf.drawImage("fichadetreino.png", x=150, y=650, width=300, height=100)
+
+    pdf.drawImage("fundo02.jpg", 0, 0, width=width, height=height)
 
    
      # Defina as posições iniciais (x, y) para cada grupo
     grupos = [
-        ("Quadríceps", 0, 50, 600),
-        ("Posterior de Coxa + Glúteos", 4, 350, 600),
-        ("Peito", 8, 50, 450),
-        ("Costas", 12, 350, 450),
-        ("Ombro", 16, 50, 300),
-        ("Tríceps", 20, 350, 300),
-        ("Bíceps", 24, 225, 150),
+        ("Quadríceps", 0, 50, 650),
+        ("Posterior de Coxa + Glúteos", 4, 350, 650),
+        ("Peito", 8, 50, 500),
+        ("Costas", 12, 350, 500),
+        ("Ombro", 16, 50, 350),
+        ("Tríceps", 20, 350, 350),
+        ("Bíceps", 24, 225, 200),
     ]
 
     for grupo, inicio, x, y in grupos:
@@ -122,9 +126,11 @@ def gerar_pdf3(dados_treino3):
     y = 700  # Posição inicial vertical
 
 
-    pdf.drawImage("Logo akdmia do joel.jpg", x=20, y=690, width=150, height=100)
-    pdf.drawImage("Logo akdmia do joel.jpg", x=430, y=690, width=150, height=100)
-    pdf.drawImage("fichadetreino.png", x=150, y=690, width=300, height=100)
+    # pdf.drawImage("Logo akdmia do joel.jpg", x=20, y=690, width=150, height=100)
+    # pdf.drawImage("Logo akdmia do joel.jpg", x=430, y=690, width=150, height=100)
+    # pdf.drawImage("fichadetreino.png", x=150, y=690, width=300, height=100)
+
+    pdf.drawImage("fundo03.jpg", 0, 0, width=width, height=height)
 
     grupos = [
         ("Quadríceps", 0, 50, 680),
