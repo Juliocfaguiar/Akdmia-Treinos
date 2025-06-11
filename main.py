@@ -8,7 +8,7 @@ from pdf import gerar_pdf1, gerar_pdf2, gerar_pdf3
 
 col1,col2,col3 = st.columns([1, 1, 1])
 with col2:
-    st.image("akdmia azul.jpg", width=1000)
+    st.image("akdmia azul.jpg", width=500)
 
 
 col4,col5,col6 = st.columns([0.5, 1, 0.5])
@@ -54,13 +54,31 @@ with col9:
         on_change=set_triset
     )
 
+
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+
+st.checkbox("Quadriceps", value=st.session_state.get("Quadriceps", False), key="Quadriceps")
+st.checkbox("Posterior de Coxa + Glúteos", value=st.session_state.get("PosteriorCoxa", False), key="PosteriorCoxa")
+st.checkbox("Peito", value=st.session_state.get("Peito", False), key="Peito")
+st.checkbox("Costas", value=st.session_state.get("Costas", False), key="Costas")
+st.checkbox("Ombros", value=st.session_state.get("Ombros", False), key="Ombros")
+st.checkbox("Tríceps", value=st.session_state.get("Triceps",False), key="Triceps")
+st.checkbox("Bíceps", value=st.session_state.get("Biceps", False), key="Biceps")
+
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+
+
+
+
 quadriceps = ["Agachamento livre", "Agachamento frontal", "Agachamento baixo", "Agachamento alto", "Agachamento no Smith", "Agachamento frontal no Smith", "Agachamento com pausa", "Agachamento búlgaro", "Recuo com halteres", "Avanço com halteres", "Step-up com halteres", "Agachamento búlgaro com halteres", "Agachamento com elevação de calcanhar", "Agachamento sumô", "Leg press 45°", "Leg press 45º com os pés juntos", "Leg press 90°", "Leg press unilateral", "Cadeira extensora", "Cadeira extensora unilateral", "Cadeira extensora com isometria", "Hack machine", "Hack machine reverso", "Smith machine", "Smith machine Frontal", "Agachamento livre", "Agachamento com salto", "Duck walk"]
 
-posteriorCoxa = ["Stiff com barra", "Stiff com halteres", "Stiff unilateral com halteres", "Afundo com halteres", "Terra com pernas rígidas", "Bom dia com barra", "Flexão nórtica", "Mesa flexora", "Cadeira flexora", "Flexora em pé", "Elevação pélvica", "Leg press 45º com os pés altos", "Hack machine com os pés altos", "Extensão de quadril com tornozeleira", "Extensão de quadril no banco",  "Extensão de quadril no cross", "Elevação pélvica unilateral", "Abdução de quadril em pé", "Abdução de quadril deitada", "cadeira abdutora", "cadeira adutora", "Chute para trás no cross","Chute lateral no cross", "Chute para trás com caneleira", "Chute lateral com caneleira", "Afundo no step", "Passada lateral", "Passada cruzada", "Passada cruzada com halteres", "Agachamento frog pump", "Fire hydrant", "Donkey kicks com caneleira"]
+posteriorCoxa = ["Stiff com barra", "Stiff com halteres", "Stiff unilateral com halteres", "Afundo com halteres", "Terra com pernas rígidas", "Bom dia com barra", "Flexão nórtica", "Mesa flexora", "Cadeira flexora", "Flexora em pé", "Elevação pélvica", "Leg press 45º com os pés altos", "Hack machine com os pés altos", "Extensão de quadril com torn.", "Extensão de quadril no banco",  "Extensão de quadril no cross", "Elevação pélvica unilateral", "Abdução de quadril em pé", "Abdução de quadril deitada", "cadeira abdutora", "cadeira adutora", "Chute para trás no cross","Chute lateral no cross", "Chute para trás com caneleira", "Chute lateral com caneleira", "Afundo no step", "Passada lateral", "Passada cruzada", "Passada cruzada com halteres", "Agachamento frog pump", "Fire hydrant", "Donkey kicks com caneleira"]
 
 peito=["Supino reto com barra", "Supino inclinado com barra", "Supino declinado com barra", "Supino reto com pegada fechada", "Supino reto com halteres", "Supino inclinado com halteres", "Supino declinado com halteres", "Crucifixo reto com halteres", "Crucifixo inclinado com halteres", "Crucifixo declinado com halteres", "Supino com giro", "Pec deck", "peck deck unilateral", "Máquina com pegada neutra", "Cross-over alto", "Cross-over baixo", "Cross-over na linha do peito", "Crucifixo com polia baixa", "Crucifixo com polia alta"]
 
-costas = ["Pulley frente", "Pulley triângulo", "Pulley unilateral", "Remada sentado com triângulo", "Remada sentado com barra", "Remada sentado unilateral", "Remada baixa", "Remada alta", "Remada na máquina Hammer", "Remada na máquina Hammer uni", "Remada curvada com barra", "Remada curvada com halteres", "Remada serrote", "Pulldown com barra", "Pulldown com corda", "Pulldown com triângulo"]
+costas = ["Pulley frente", "Pulley triângulo", "Pulley unilateral", "Remada sentado com triângulo", "Remada sentado com barra", "Remada sentado unilateral", "Remada baixa", "Remada alta", "Remada na máquina Hammer", "Remada na máquina Hammer uni", "Remada curvada com barra", "Remada curvada com halteres", "Remada serrote", "Pulldown com barra", "Pulldown com corda", "Pulldown com triângulo","Meio terra"]
 
 ombros = ["Desenvolvimento frontal com barra", "Elevação frontal com barra", "Desenvolvimento frontal com halteres", "Arnold press", "Elevação frontal com halteres", "Elevação frontal com halteres alternado", "Elevação lateral com halteres", "Elevação lateral com halteres alternado", "Crucifixo invertido com halteres", "Crucifixo invertido com halteres alternado", "Elevação martelo alternada", "Elevação martelo total", "Elevação lateral na polia", "Elevação frontal na polia", "Face pull com corda", "Remada alta na polia baixa", "Crucifixo invertido na máquina peck deck"]
 
@@ -75,186 +93,193 @@ series = ["4*8","4*10","4*12","4*15","4*20","4*8~12","5*8","5*10","5*12","5*15",
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
 
 if st.session_state.get("Individual", True):
-    st.subheader("Quadríceps",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= quadriceps, key="exercicio1")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series1")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=quadriceps, key="exercicio2")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series2")
+    if st.session_state.get("Quadriceps", True):
+        st.subheader("Quadríceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= quadriceps, key="exercicio1")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series1")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=quadriceps, key="exercicio2")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series2")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=quadriceps, key="exercicio3")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series3")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=quadriceps, key="exercicio3")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series3")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=quadriceps, key="exercicio4")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series4")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=quadriceps, key="exercicio4")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series4")
 
-## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Posterior de Coxa + Clúteos",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= posteriorCoxa, key="exercicio5")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series5")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=posteriorCoxa, key="exercicio6")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series6")
+    ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("PosteriorCoxa", True):
+        st.subheader("Posterior de Coxa + Clúteos",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= posteriorCoxa, key="exercicio5")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series5")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=posteriorCoxa, key="exercicio6")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series6")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=posteriorCoxa, key="exercicio7")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series7")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=posteriorCoxa, key="exercicio7")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series7")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=posteriorCoxa, key="exercicio8")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series8")
-
-## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Peito",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= peito, key="exercicio9")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series9")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=peito, key="exercicio10")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series10")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=peito, key="exercicio11")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series11")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=peito, key="exercicio12")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series12")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=posteriorCoxa, key="exercicio8")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series8")
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Costas",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= costas, key="exercicio13")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series13")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=costas, key="exercicio14")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series14")
+    if st.session_state.get("Peito", True):
+        st.subheader("Peito",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= peito, key="exercicio9")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series9")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=peito, key="exercicio10")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series10")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=costas, key="exercicio15")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series15")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=peito, key="exercicio11")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series11")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=costas, key="exercicio16")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series16")
-
-## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Ombros",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= ombros, key="exercicio17")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series17")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=ombros, key="exercicio18")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series18")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=ombros, key="exercicio19")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series19")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=ombros, key="exercicio20")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series20")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=peito, key="exercicio12")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series12")
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Tríceps",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= triceps, key="exercicio21")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series21")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=triceps, key="exercicio22")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series22")
+    if st.session_state.get("Costas", True):
+        st.subheader("Costas",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= costas, key="exercicio13")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series13")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=costas, key="exercicio14")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series14")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=triceps, key="exercicio23")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series23")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=costas, key="exercicio15")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series15")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=triceps, key="exercicio24")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series24")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=costas, key="exercicio16")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series16")
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Bíceps",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= biceps, key="exercicio25")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series25")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=biceps, key="exercicio26")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series26")
+    if st.session_state.get("Ombros", True):
+        st.subheader("Ombros",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= ombros, key="exercicio17")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series17")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=ombros, key="exercicio18")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series18")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=biceps, key="exercicio27")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series27")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=ombros, key="exercicio19")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series19")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=biceps, key="exercicio28")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series28")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=ombros, key="exercicio20")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series20")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("Triceps", True):
+        st.subheader("Tríceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= triceps, key="exercicio21")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series21")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=triceps, key="exercicio22")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series22")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=triceps, key="exercicio23")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series23")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=triceps, key="exercicio24")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series24")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("Biceps", True):
+        st.subheader("Bíceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= biceps, key="exercicio25")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series25")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=biceps, key="exercicio26")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series26")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=biceps, key="exercicio27")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series27")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=biceps, key="exercicio28")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series28")
 
 
 
@@ -323,24 +348,30 @@ if st.session_state.get("Individual", True):
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
 
+    if st.session_state.get("Quadriceps", True) or \
+        st.session_state.get("PosteriorCoxa", True) or \
+        st.session_state.get("Peito", True) or \
+        st.session_state.get("Costas", True) or \
+        st.session_state.get("Ombros", True) or \
+        st.session_state.get("Triceps", True) or \
+        st.session_state.get("Biceps", True):
+        # Botão para gerar PDF
+        if st.button("Gerar PDF"):
+            from pdf import gerar_pdf1
+            gerar_pdf1(st.session_state["dados_treino"])
 
-    # Botão para gerar PDF
-    if st.button("Gerar PDF"):
-        from pdf import gerar_pdf1
-        gerar_pdf1(st.session_state["dados_treino"])
 
+        pdf_buffer1 = gerar_pdf1(dados_treino1).getvalue()
 
-    pdf_buffer1 = gerar_pdf1(dados_treino1).getvalue()
+        #  Botão para download do PDF
 
-    #  Botão para download do PDF
-
-    st.download_button(
-        label="Baixar PDF",
-        data=pdf_buffer1,
-        file_name="FichaTreino.pdf",
-        mime="pdf",
-        key="download_pdf_button"
-            )
+        st.download_button(
+            label="Baixar PDF",
+            data=pdf_buffer1,
+            file_name="FichaTreino.pdf",
+            mime="pdf",
+            key="download_pdf_button"
+                )
     
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
 
@@ -349,214 +380,221 @@ if st.session_state.get("Individual", True):
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
 
 if st.session_state.get("Biset", True):
-    st.subheader("Quadríceps",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= quadriceps, key="exercicio1")
-        primeiro = st.selectbox("", options= quadriceps, key="exercicio01")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series1")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=quadriceps, key="exercicio2")
-        segundo = st.selectbox("", options=quadriceps, key="exercicio02")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series2")
+    if st.session_state.get("Quadriceps", True):
+        st.subheader("Quadríceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= quadriceps, key="exercicio1")
+            primeiro = st.selectbox("", options= quadriceps, key="exercicio01")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series1")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=quadriceps, key="exercicio2")
+            segundo = st.selectbox("", options=quadriceps, key="exercicio02")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series2")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=quadriceps, key="exercicio3")
-        segundo = st.selectbox("", options=quadriceps, key="exercicio03")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series3")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=quadriceps, key="exercicio3")
+            segundo = st.selectbox("", options=quadriceps, key="exercicio03")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series3")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=quadriceps, key="exercicio4")
-        segundo = st.selectbox("", options=quadriceps, key="exercicio04")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series4")
-
-## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Posterior de Coxa + Clúteos",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= posteriorCoxa, key="exercicio5")
-        primeiro = st.selectbox("", options= posteriorCoxa, key="exercicio05")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series5")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=posteriorCoxa, key="exercicio6")
-        segundo = st.selectbox("", options=posteriorCoxa, key="exercicio06")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series6")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=posteriorCoxa, key="exercicio7")
-        segundo = st.selectbox("", options=posteriorCoxa, key="exercicio07")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series7")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=posteriorCoxa, key="exercicio8")
-        segundo = st.selectbox("", options=posteriorCoxa, key="exercicio08")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series8")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=quadriceps, key="exercicio4")
+            segundo = st.selectbox("", options=quadriceps, key="exercicio04")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series4")
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Peito",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= peito, key="exercicio9")
-        primeiro = st.selectbox("", options= peito, key="exercicio09")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series9")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=peito, key="exercicio10")
-        segundo = st.selectbox("", options=peito, key="exercicio010")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series10")
+    if st.session_state.get("PosteriorCoxa", True):
+        st.subheader("Posterior de Coxa + Clúteos",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= posteriorCoxa, key="exercicio5")
+            primeiro = st.selectbox("", options= posteriorCoxa, key="exercicio05")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series5")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=posteriorCoxa, key="exercicio6")
+            segundo = st.selectbox("", options=posteriorCoxa, key="exercicio06")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series6")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=peito, key="exercicio11")
-        segundo = st.selectbox("", options=peito, key="exercicio011")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series11")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=posteriorCoxa, key="exercicio7")
+            segundo = st.selectbox("", options=posteriorCoxa, key="exercicio07")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series7")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=peito, key="exercicio12")
-        segundo = st.selectbox("", options=peito, key="exercicio012")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series12")
-
-## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Costas",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= costas, key="exercicio13")
-        primeiro = st.selectbox("", options= costas, key="exercicio013")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series13")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=costas, key="exercicio14")
-        segundo = st.selectbox("", options=costas, key="exercicio014")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series14")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=costas, key="exercicio15")
-        segundo = st.selectbox("", options=costas, key="exercicio015")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series15")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=costas, key="exercicio16")
-        segundo = st.selectbox("4", options=costas, key="exercicio016")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series16")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=posteriorCoxa, key="exercicio8")
+            segundo = st.selectbox("", options=posteriorCoxa, key="exercicio08")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series8")
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Ombros",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= ombros, key="exercicio17")
-        primeiro = st.selectbox("", options= ombros, key="exercicio017")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series17")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=ombros, key="exercicio18")
-        segundo = st.selectbox("", options=ombros, key="exercicio018")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series18")
+    if st.session_state.get("Peito", True):
+        st.subheader("Peito",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= peito, key="exercicio9")
+            primeiro = st.selectbox("", options= peito, key="exercicio09")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series9")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=peito, key="exercicio10")
+            segundo = st.selectbox("", options=peito, key="exercicio010")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series10")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=ombros, key="exercicio19")
-        segundo = st.selectbox("", options=ombros, key="exercicio019")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series19")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=peito, key="exercicio11")
+            segundo = st.selectbox("", options=peito, key="exercicio011")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series11")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=ombros, key="exercicio20")
-        segundo = st.selectbox("", options=ombros, key="exercicio020")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series20")
-
-## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Tríceps",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= triceps, key="exercicio21")
-        primeiro = st.selectbox("", options= triceps, key="exercicio021")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series21")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=triceps, key="exercicio22")
-        segundo = st.selectbox("", options=triceps, key="exercicio022")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series22")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=triceps, key="exercicio23")
-        segundo = st.selectbox("", options=triceps, key="exercicio023")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series23")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=triceps, key="exercicio24")
-        segundo = st.selectbox("", options=triceps, key="exercicio024")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series24")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=peito, key="exercicio12")
+            segundo = st.selectbox("", options=peito, key="exercicio012")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series12")
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Bíceps",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= biceps, key="exercicio25")
-        primeiro = st.selectbox("", options= biceps, key="exercicio025")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series25")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=biceps, key="exercicio26")
-        segundo = st.selectbox("", options=biceps, key="exercicio026")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series26")
+    if st.session_state.get("Costas", True):
+        st.subheader("Costas",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= costas, key="exercicio13")
+            primeiro = st.selectbox("", options= costas, key="exercicio013")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series13")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=costas, key="exercicio14")
+            segundo = st.selectbox("", options=costas, key="exercicio014")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series14")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=biceps, key="exercicio27")
-        segundo = st.selectbox("", options=biceps, key="exercicio027")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series27")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=costas, key="exercicio15")
+            segundo = st.selectbox("", options=costas, key="exercicio015")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series15")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=biceps, key="exercicio28")
-        segundo = st.selectbox("", options=biceps, key="exercicio028")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series28")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=costas, key="exercicio16")
+            segundo = st.selectbox("", options=costas, key="exercicio016")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series16")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("Ombros", True):
+        st.subheader("Ombros",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= ombros, key="exercicio17")
+            primeiro = st.selectbox("", options= ombros, key="exercicio017")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series17")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=ombros, key="exercicio18")
+            segundo = st.selectbox("", options=ombros, key="exercicio018")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series18")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=ombros, key="exercicio19")
+            segundo = st.selectbox("", options=ombros, key="exercicio019")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series19")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=ombros, key="exercicio20")
+            segundo = st.selectbox("", options=ombros, key="exercicio020")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series20")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("Triceps", True):
+        st.subheader("Tríceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= triceps, key="exercicio21")
+            primeiro = st.selectbox("", options= triceps, key="exercicio021")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series21")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=triceps, key="exercicio22")
+            segundo = st.selectbox("", options=triceps, key="exercicio022")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series22")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=triceps, key="exercicio23")
+            segundo = st.selectbox("", options=triceps, key="exercicio023")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series23")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=triceps, key="exercicio24")
+            segundo = st.selectbox("", options=triceps, key="exercicio024")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series24")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("Biceps", True):
+        st.subheader("Bíceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= biceps, key="exercicio25")
+            primeiro = st.selectbox("", options= biceps, key="exercicio025")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series25")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=biceps, key="exercicio26")
+            segundo = st.selectbox("", options=biceps, key="exercicio026")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series26")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=biceps, key="exercicio27")
+            segundo = st.selectbox("", options=biceps, key="exercicio027")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series27")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=biceps, key="exercicio28")
+            segundo = st.selectbox("", options=biceps, key="exercicio028")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series28")
 
 
 
@@ -654,24 +692,30 @@ if st.session_state.get("Biset", True):
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
 
+    if st.session_state.get("Quadriceps", True) or \
+        st.session_state.get("PosteriorCoxa", True) or \
+        st.session_state.get("Peito", True) or \
+        st.session_state.get("Costas", True) or \
+        st.session_state.get("Ombros", True) or \
+        st.session_state.get("Triceps", True) or \
+        st.session_state.get("Biceps", True):
+        # Botão para gerar PDF
+        if st.button("Gerar PDF"):
+            from pdf import gerar_pdf2
+            gerar_pdf2(st.session_state["dados_treino"])
 
-    # Botão para gerar PDF
-    if st.button("Gerar PDF"):
-        from pdf import gerar_pdf2
-        gerar_pdf2(st.session_state["dados_treino"])
 
+        pdf_buffer2 = gerar_pdf2(dados_treino2).getvalue()
 
-    pdf_buffer2 = gerar_pdf2(dados_treino2).getvalue()
+        #  Botão para download do PDF
 
-    #  Botão para download do PDF
-
-    st.download_button(
-        label="Baixar PDF",
-        data=pdf_buffer2,
-        file_name="FichaTreino.pdf",
-        mime="pdf",
-        key="download_pdf_button"
-            )
+        st.download_button(
+            label="Baixar PDF",
+            data=pdf_buffer2,
+            file_name="FichaTreino.pdf",
+            mime="pdf",
+            key="download_pdf_button"
+                )
     
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
 
@@ -680,242 +724,249 @@ if st.session_state.get("Biset", True):
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
 
 if st.session_state.get("Triset", True):
-    st.subheader("Quadríceps",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= quadriceps, key="exercicio1")
-        primeiro = st.selectbox("", options= quadriceps, key="exercicio01")
-        primeiro = st.selectbox("", options= quadriceps, key="exercicio001")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series1")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=quadriceps, key="exercicio2")
-        segundo = st.selectbox("", options=quadriceps, key="exercicio02")
-        segundo = st.selectbox("", options=quadriceps, key="exercicio002")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series2")
+    if st.session_state.get("Quadriceps", True):
+        st.subheader("Quadríceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= quadriceps, key="exercicio1")
+            primeiro = st.selectbox("", options= quadriceps, key="exercicio01")
+            primeiro = st.selectbox("", options= quadriceps, key="exercicio001")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series1")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=quadriceps, key="exercicio2")
+            segundo = st.selectbox("", options=quadriceps, key="exercicio02")
+            segundo = st.selectbox("", options=quadriceps, key="exercicio002")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series2")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=quadriceps, key="exercicio3")
-        segundo = st.selectbox("", options=quadriceps, key="exercicio03")
-        segundo = st.selectbox("", options=quadriceps, key="exercicio003")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series3")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=quadriceps, key="exercicio3")
+            segundo = st.selectbox("", options=quadriceps, key="exercicio03")
+            segundo = st.selectbox("", options=quadriceps, key="exercicio003")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series3")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=quadriceps, key="exercicio4")
-        segundo = st.selectbox("", options=quadriceps, key="exercicio04")
-        segundo = st.selectbox("", options=quadriceps, key="exercicio004")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series4")
-
-## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Posterior de Coxa + Clúteos",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= posteriorCoxa, key="exercicio5")
-        primeiro = st.selectbox("", options= posteriorCoxa, key="exercicio05")
-        primeiro = st.selectbox("", options= posteriorCoxa, key="exercicio005")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series5")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=posteriorCoxa, key="exercicio6")
-        segundo = st.selectbox("", options=posteriorCoxa, key="exercicio06")
-        segundo = st.selectbox("", options=posteriorCoxa, key="exercicio006")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series6")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=posteriorCoxa, key="exercicio7")
-        segundo = st.selectbox("", options=posteriorCoxa, key="exercicio07")
-        segundo = st.selectbox("", options=posteriorCoxa, key="exercicio007")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series7")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=posteriorCoxa, key="exercicio8")
-        segundo = st.selectbox("", options=posteriorCoxa, key="exercicio08")
-        segundo = st.selectbox("", options=posteriorCoxa, key="exercicio008")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series8")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=quadriceps, key="exercicio4")
+            segundo = st.selectbox("", options=quadriceps, key="exercicio04")
+            segundo = st.selectbox("", options=quadriceps, key="exercicio004")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series4")
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Peito",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= peito, key="exercicio9")
-        primeiro = st.selectbox("", options= peito, key="exercicio09")
-        primeiro = st.selectbox("", options= peito, key="exercicio009")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series9")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=peito, key="exercicio10")
-        segundo = st.selectbox("", options=peito, key="exercicio010")
-        segundo = st.selectbox("", options=peito, key="exercicio0010")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series10")
+    if st.session_state.get("PosteriorCoxa", True):
+        st.subheader("Posterior de Coxa + Clúteos",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= posteriorCoxa, key="exercicio5")
+            primeiro = st.selectbox("", options= posteriorCoxa, key="exercicio05")
+            primeiro = st.selectbox("", options= posteriorCoxa, key="exercicio005")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series5")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=posteriorCoxa, key="exercicio6")
+            segundo = st.selectbox("", options=posteriorCoxa, key="exercicio06")
+            segundo = st.selectbox("", options=posteriorCoxa, key="exercicio006")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series6")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=peito, key="exercicio11")
-        segundo = st.selectbox("", options=peito, key="exercicio011")
-        segundo = st.selectbox("", options=peito, key="exercicio0011")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series11")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=posteriorCoxa, key="exercicio7")
+            segundo = st.selectbox("", options=posteriorCoxa, key="exercicio07")
+            segundo = st.selectbox("", options=posteriorCoxa, key="exercicio007")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series7")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=peito, key="exercicio12")
-        segundo = st.selectbox("", options=peito, key="exercicio012")
-        segundo = st.selectbox("", options=peito, key="exercicio0012")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series12")
-
-## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Costas",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= costas, key="exercicio13")
-        primeiro = st.selectbox("", options= costas, key="exercicio013")
-        primeiro = st.selectbox("", options= costas, key="exercicio0013")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series13")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=costas, key="exercicio14")
-        segundo = st.selectbox("", options=costas, key="exercicio014")
-        segundo = st.selectbox("", options=costas, key="exercicio0014")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series14")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=costas, key="exercicio15")
-        segundo = st.selectbox("", options=costas, key="exercicio015")
-        segundo = st.selectbox("", options=costas, key="exercicio0015")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series15")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=costas, key="exercicio16")
-        segundo = st.selectbox("4", options=costas, key="exercicio016")
-        segundo = st.selectbox("4", options=costas, key="exercicio0016")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series16")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=posteriorCoxa, key="exercicio8")
+            segundo = st.selectbox("", options=posteriorCoxa, key="exercicio08")
+            segundo = st.selectbox("", options=posteriorCoxa, key="exercicio008")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series8")
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Ombros",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= ombros, key="exercicio17")
-        primeiro = st.selectbox("", options= ombros, key="exercicio017")
-        primeiro = st.selectbox("", options= ombros, key="exercicio0017")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series17")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=ombros, key="exercicio18")
-        segundo = st.selectbox("", options=ombros, key="exercicio018")
-        segundo = st.selectbox("", options=ombros, key="exercicio0018")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series18")
+    if st.session_state.get("Peito", True):
+        st.subheader("Peito",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= peito, key="exercicio9")
+            primeiro = st.selectbox("", options= peito, key="exercicio09")
+            primeiro = st.selectbox("", options= peito, key="exercicio009")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series9")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=peito, key="exercicio10")
+            segundo = st.selectbox("", options=peito, key="exercicio010")
+            segundo = st.selectbox("", options=peito, key="exercicio0010")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series10")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=ombros, key="exercicio19")
-        segundo = st.selectbox("", options=ombros, key="exercicio019")
-        segundo = st.selectbox("", options=ombros, key="exercicio0019")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series19")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=peito, key="exercicio11")
+            segundo = st.selectbox("", options=peito, key="exercicio011")
+            segundo = st.selectbox("", options=peito, key="exercicio0011")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series11")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=ombros, key="exercicio20")
-        segundo = st.selectbox("", options=ombros, key="exercicio020")
-        segundo = st.selectbox("", options=ombros, key="exercicio0020")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series20")
-
-## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Tríceps",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= triceps, key="exercicio21")
-        primeiro = st.selectbox("", options= triceps, key="exercicio021")
-        primeiro = st.selectbox("", options= triceps, key="exercicio0021")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series21")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=triceps, key="exercicio22")
-        segundo = st.selectbox("", options=triceps, key="exercicio022")
-        segundo = st.selectbox("", options=triceps, key="exercicio0022")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series22")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=triceps, key="exercicio23")
-        segundo = st.selectbox("", options=triceps, key="exercicio023")
-        segundo = st.selectbox("", options=triceps, key="exercicio0023")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series23")
-
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=triceps, key="exercicio24")
-        segundo = st.selectbox("", options=triceps, key="exercicio024")
-        segundo = st.selectbox("", options=triceps, key="exercicio0024")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series24")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=peito, key="exercicio12")
+            segundo = st.selectbox("", options=peito, key="exercicio012")
+            segundo = st.selectbox("", options=peito, key="exercicio0012")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series12")
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
-    st.subheader("Bíceps",divider="gray")
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        primeiro = st.selectbox("Exercício 1", options= biceps, key="exercicio25")
-        primeiro = st.selectbox("", options= biceps, key="exercicio025")
-        primeiro = st.selectbox("", options= biceps, key="exercicio0025")
-    with col2:
-        primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series25")
-    
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 2", options=biceps, key="exercicio26")
-        segundo = st.selectbox("", options=biceps, key="exercicio026")
-        segundo = st.selectbox("", options=biceps, key="exercicio0026")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series26")
+    if st.session_state.get("Costas", True):
+        st.subheader("Costas",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= costas, key="exercicio13")
+            primeiro = st.selectbox("", options= costas, key="exercicio013")
+            primeiro = st.selectbox("", options= costas, key="exercicio0013")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series13")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=costas, key="exercicio14")
+            segundo = st.selectbox("", options=costas, key="exercicio014")
+            segundo = st.selectbox("", options=costas, key="exercicio0014")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series14")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 3", options=biceps, key="exercicio27")
-        segundo = st.selectbox("", options=biceps, key="exercicio027")
-        segundo = st.selectbox("", options=biceps, key="exercicio0027")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series27")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=costas, key="exercicio15")
+            segundo = st.selectbox("", options=costas, key="exercicio015")
+            segundo = st.selectbox("", options=costas, key="exercicio0015")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series15")
 
-    col1,col2 = st.columns([1, 0.25])
-    with col1:
-        segundo = st.selectbox("Exercício 4", options=biceps, key="exercicio28")
-        segundo = st.selectbox("", options=biceps, key="exercicio028")
-        segundo = st.selectbox("", options=biceps, key="exercicio0028")
-    with col2:
-        segundo_series = st.selectbox("Séries/Repetições", options=series, key="series28")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=costas, key="exercicio16")
+            segundo = st.selectbox("", options=costas, key="exercicio016")
+            segundo = st.selectbox("", options=costas, key="exercicio0016")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series16")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("Ombros", True):
+        st.subheader("Ombros",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= ombros, key="exercicio17")
+            primeiro = st.selectbox("", options= ombros, key="exercicio017")
+            primeiro = st.selectbox("", options= ombros, key="exercicio0017")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series17")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=ombros, key="exercicio18")
+            segundo = st.selectbox("", options=ombros, key="exercicio018")
+            segundo = st.selectbox("", options=ombros, key="exercicio0018")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series18")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=ombros, key="exercicio19")
+            segundo = st.selectbox("", options=ombros, key="exercicio019")
+            segundo = st.selectbox("", options=ombros, key="exercicio0019")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series19")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=ombros, key="exercicio20")
+            segundo = st.selectbox("", options=ombros, key="exercicio020")
+            segundo = st.selectbox("", options=ombros, key="exercicio0020")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series20")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("Triceps", True):
+        st.subheader("Tríceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= triceps, key="exercicio21")
+            primeiro = st.selectbox("", options= triceps, key="exercicio021")
+            primeiro = st.selectbox("", options= triceps, key="exercicio0021")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series21")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=triceps, key="exercicio22")
+            segundo = st.selectbox("", options=triceps, key="exercicio022")
+            segundo = st.selectbox("", options=triceps, key="exercicio0022")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series22")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=triceps, key="exercicio23")
+            segundo = st.selectbox("", options=triceps, key="exercicio023")
+            segundo = st.selectbox("", options=triceps, key="exercicio0023")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series23")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=triceps, key="exercicio24")
+            segundo = st.selectbox("", options=triceps, key="exercicio024")
+            segundo = st.selectbox("", options=triceps, key="exercicio0024")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series24")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("Biceps", True):
+        st.subheader("Bíceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= biceps, key="exercicio25")
+            primeiro = st.selectbox("", options= biceps, key="exercicio025")
+            primeiro = st.selectbox("", options= biceps, key="exercicio0025")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series25")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=biceps, key="exercicio26")
+            segundo = st.selectbox("", options=biceps, key="exercicio026")
+            segundo = st.selectbox("", options=biceps, key="exercicio0026")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series26")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=biceps, key="exercicio27")
+            segundo = st.selectbox("", options=biceps, key="exercicio027")
+            segundo = st.selectbox("", options=biceps, key="exercicio0027")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series27")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=biceps, key="exercicio28")
+            segundo = st.selectbox("", options=biceps, key="exercicio028")
+            segundo = st.selectbox("", options=biceps, key="exercicio0028")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series28")
 
 
 
@@ -1043,21 +1094,27 @@ if st.session_state.get("Triset", True):
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
 
+    if st.session_state.get("Quadriceps", True) or \
+        st.session_state.get("PosteriorCoxa", True) or \
+        st.session_state.get("Peito", True) or \
+        st.session_state.get("Costas", True) or \
+        st.session_state.get("Ombros", True) or \
+        st.session_state.get("Triceps", True) or \
+        st.session_state.get("Biceps", True):
+        # Botão para gerar PDF
+        if st.button("Gerar PDF"):
+            from pdf import gerar_pdf3
+            gerar_pdf3(st.session_state["dados_treino"])
 
-    # Botão para gerar PDF
-    if st.button("Gerar PDF"):
-        from pdf import gerar_pdf3
-        gerar_pdf3(st.session_state["dados_treino"])
 
+        pdf_buffer3 = gerar_pdf3(dados_treino3).getvalue()
 
-    pdf_buffer3 = gerar_pdf3(dados_treino3).getvalue()
+        #  Botão para download do PDF
 
-    #  Botão para download do PDF
-
-    st.download_button(
-        label="Baixar PDF",
-        data=pdf_buffer3,
-        file_name="FichaTreino.pdf",
-        mime="pdf",
-        key="download_pdf_button"
-            )
+        st.download_button(
+            label="Baixar PDF",
+            data=pdf_buffer3,
+            file_name="FichaTreino.pdf",
+            mime="pdf",
+            key="download_pdf_button"
+                )
