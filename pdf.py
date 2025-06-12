@@ -15,14 +15,22 @@ def gerar_pdf1(dados_treino1):
 
     grupos_todos = [
         ("Quadríceps", "Quadriceps", 0),
-        ("Posterior de Coxa + Glúteos", "PosteriorCoxa", 4),
+        ("Posterior de Coxa ", "PosteriorCoxa", 4),
         ("Peito", "Peito", 8),
         ("Costas", "Costas", 12),
         ("Ombro", "Ombros", 16),
         ("Tríceps", "Triceps", 20),
-        ("Bíceps", "Biceps", 24)
+        ("Bíceps", "Biceps", 24),
+        ("glúteos", "Gluteos", 28),
+        ("Quadriceps + Posterior de Coxa", "QuadricepsPosteriorCoxa", 32),
+        ("Posterior de Coxa + Glúteos", "PosteriorCoxaGluteos", 36),
+        ("Peito + Costas", "PeitoCostas", 40),
+        ("Peito + Ombros", "PeitoOmbros", 44),
+        ("Peito + Tríceps", "PeitoTriceps", 48),
+        ("Ombro + Triceps", "OmbroTriceps", 52),
+        ("Biceps + Tríceps", "BicepsTriceps", 56),
+        ("Costas + Bíceps", "CostasBiceps", 60),
     ]
-
     posicoes_por_qtd = {
         1: [(60, 500)],
         2: [(60, 600), (60, 400)],
@@ -31,6 +39,7 @@ def gerar_pdf1(dados_treino1):
         5: [(60, 650), (330, 650), (60, 500), (330, 500), (225, 350)],
         6: [(60, 650), (350, 650), (60, 500), (350, 500), (60, 350), (350, 350)],
         7: [(60, 650), (350, 650), (60, 500), (350, 500), (60, 350), (350, 350), (225, 200)],
+        8: [(60, 650), (350, 650), (60, 500), (350, 500), (60, 350), (350, 350), (225, 200), (225, 50)],
     }
 
     grupos_selecionados = [
@@ -60,6 +69,9 @@ def gerar_pdf1(dados_treino1):
         font_exercicio = 14
     elif n_grupos == 6:
         font_titulo = 18
+        font_exercicio = 14
+    elif n_grupos == 7:
+        font_titulo = 16
         font_exercicio = 14
     else:
         font_titulo = 14
@@ -94,12 +106,21 @@ def gerar_pdf2(dados_treino2):
 
     grupos_todos = [
         ("Quadríceps", "Quadriceps", 0),
-        ("Posterior de Coxa + Glúteos", "PosteriorCoxa", 4),
+        ("Posterior de Coxa ", "PosteriorCoxa", 4),
         ("Peito", "Peito", 8),
         ("Costas", "Costas", 12),
         ("Ombro", "Ombros", 16),
         ("Tríceps", "Triceps", 20),
-        ("Bíceps", "Biceps", 24)
+        ("Bíceps", "Biceps", 24),
+        ("glúteos", "Gluteos", 28),
+        ("Quadriceps + Posterior de Coxa", "QuadricepsPosteriorCoxa", 32),
+        ("Posterior de Coxa + Glúteos", "PosteriorCoxaGluteos", 36),
+        ("Peito + Costas", "PeitoCostas", 40),
+        ("Peito + Ombro", "PeitoOmbro", 44),
+        ("Peito + Tríceps", "PeitoTriceps", 48),
+        ("Ombro + Triceps", "OmbroTriceps", 52),
+        ("Biceps + Tríceps", "BicepsTriceps", 56),
+        ("Costas + Bíceps", "CostasBiceps", 60),
     ]
 
     posicoes_por_qtd = {
@@ -110,6 +131,7 @@ def gerar_pdf2(dados_treino2):
         5: [(20, 670), (330, 670), (20, 500), (330, 500), (225, 330)],
         6: [(20, 670), (350, 670), (20, 520), (350, 520), (20, 370), (350, 370)],
         7: [(20, 650), (350, 650), (20, 500), (350, 500), (20, 350), (350, 350), (225, 200)],
+        8: [(20, 650), (350, 650), (20, 500), (350, 500), (20, 350), (350, 350), (225, 200), (225, 50)],
     }
 
     grupos_selecionados = [
@@ -181,12 +203,21 @@ def gerar_pdf3(dados_treino3):
 
     grupos_todos = [
         ("Quadríceps", "Quadriceps", 0),
-        ("Posterior de Coxa + Glúteos", "PosteriorCoxa", 4),
+        ("Posterior de Coxa ", "PosteriorCoxa", 4),
         ("Peito", "Peito", 8),
         ("Costas", "Costas", 12),
         ("Ombro", "Ombros", 16),
         ("Tríceps", "Triceps", 20),
-        ("Bíceps", "Biceps", 24)
+        ("Bíceps", "Biceps", 24),
+        ("glúteos", "Gluteos", 28),
+        ("Quadriceps + Posterior de Coxa", "QuadricepsPosteriorCoxa", 32),
+        ("Posterior de Coxa + Glúteos", "PosteriorCoxaGluteos", 36),
+        ("Peito + Costas", "PeitoCostas", 40),
+        ("Peito + Ombro", "PeitoOmbro", 44),
+        ("Peito + Tríceps", "PeitoTriceps", 48),
+        ("Ombro + Triceps", "OmbroTriceps", 52),
+        ("Biceps + Tríceps", "BicepsTriceps", 56),
+        ("Costas + Bíceps", "CostasBiceps", 60),
     ]
 
     posicoes_por_qtd = {
@@ -197,6 +228,7 @@ def gerar_pdf3(dados_treino3):
         5: [(20, 670), (330, 670), (20, 450), (330, 450), (225, 225)],
         6: [(20, 670), (350, 670), (20, 450), (350, 450), (20, 0 ), (350, 225)],
         7: [(20, 670), (350, 670), (20, 450), (350, 450), (20, 0), (350, 225), (225, 225)],
+        8: [(20, 670), (350, 670), (20, 450), (350, 450), (20, 0), (350, 225), (225, 225), (225, 50)],
     }
 
     grupos_selecionados = [
