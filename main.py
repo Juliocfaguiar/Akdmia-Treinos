@@ -937,8 +937,250 @@ if st.session_state.get("Biset", True):
             segundo_series = st.selectbox("Séries/Repetições", options=series, key="series32")
 
 ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("QuadricepsPosteriorCoxa", True):
+        st.subheader("Quadríceps + Posterior de Coxa",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= quadriceps+posteriorCoxa, key="exercicio33")
+            primeiro = st.selectbox("", options= quadriceps+posteriorCoxa, key="exercicio033")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series33")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=quadriceps+posteriorCoxa, key="exercicio34")
+            segundo = st.selectbox("", options=quadriceps+posteriorCoxa, key="exercicio034")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series34")
 
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=quadriceps+posteriorCoxa, key="exercicio35")
+            segundo = st.selectbox("", options=quadriceps+posteriorCoxa, key="exercicio035")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series35")
 
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=quadriceps+posteriorCoxa, key="exercicio36")
+            segundo = st.selectbox("", options=quadriceps+posteriorCoxa, key="exercicio036")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series36")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("PosteriorCoxaGluteos", True):
+        st.subheader("Posterior de Coxa + Glúteos",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= posteriorCoxa+gluteos, key="exercicio37")
+            primeiro = st.selectbox("", options= posteriorCoxa+gluteos, key="exercicio037")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series37")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=posteriorCoxa+gluteos, key="exercicio38")
+            segundo = st.selectbox("", options=posteriorCoxa+gluteos, key="exercicio038")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series38")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=posteriorCoxa+gluteos, key="exercicio39")
+            segundo = st.selectbox("", options=posteriorCoxa+gluteos, key="exercicio039")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series39")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=posteriorCoxa+gluteos, key="exercicio40")
+            segundo = st.selectbox("", options=posteriorCoxa+gluteos, key="exercicio040")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series40")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("PeitoCostas", True):
+        st.subheader("Peito + Costas",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= peito+costas, key="exercicio41")
+            primeiro = st.selectbox("", options= peito+costas, key="exercicio041")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series41")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=peito+costas, key="exercicio42")
+            segundo = st.selectbox("", options=peito+costas, key="exercicio042")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series42")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=peito+costas, key="exercicio43")
+            segundo = st.selectbox("", options=peito+costas, key="exercicio043")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series43")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=peito+costas, key="exercicio44")
+            segundo = st.selectbox("", options=peito+costas, key="exercicio044")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series44")
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("PeitoOmbros", True):
+        st.subheader("Peito + Ombros",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= peito+ombros, key="exercicio45")
+            primeiro = st.selectbox("", options= peito+ombros, key="exercicio045")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series45")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=peito+ombros, key="exercicio46")
+            segundo = st.selectbox("", options=peito+ombros, key="exercicio046")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series46")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=peito+ombros, key="exercicio47")
+            segundo = st.selectbox("", options=peito+ombros, key="exercicio047")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series47")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=peito+ombros, key="exercicio48")
+            segundo = st.selectbox("", options=peito+ombros, key="exercicio048")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series48")
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("PeitoTriceps", True):
+        st.subheader("Peito + Tríceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= peito+triceps, key="exercicio49")
+            primeiro = st.selectbox("", options= peito+triceps, key="exercicio049")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series49")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=peito+triceps, key="exercicio50")
+            segundo = st.selectbox("", options=peito+triceps, key="exercicio050")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series50")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=peito+triceps, key="exercicio51")
+            segundo = st.selectbox("", options=peito+triceps, key="exercicio051")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series51")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=peito+triceps, key="exercicio52")
+            segundo = st.selectbox("", options=peito+triceps, key="exercicio052")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series52")
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("OmbrosTriceps", True):
+        st.subheader("Ombros + Tríceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= ombros+triceps, key="exercicio53")
+            primeiro = st.selectbox("", options= ombros+triceps, key="exercicio053")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series53")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=ombros+triceps, key="exercicio54")
+            segundo = st.selectbox("", options=ombros+triceps, key="exercicio054")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series54")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=ombros+triceps, key="exercicio55")
+            segundo = st.selectbox("", options=ombros+triceps, key="exercicio055")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series55")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=ombros+triceps, key="exercicio56")
+            segundo = st.selectbox("", options=ombros+triceps, key="exercicio056")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series56")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("BicepsTriceps", True):
+        st.subheader("Bíceps + Tríceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= biceps+triceps, key="exercicio57")
+            primeiro = st.selectbox("", options= biceps+triceps, key="exercicio057")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series57")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=biceps+triceps, key="exercicio58")
+            segundo = st.selectbox("", options=biceps+triceps, key="exercicio058")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series58")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=biceps+triceps, key="exercicio59")
+            segundo = st.selectbox("", options=biceps+triceps, key="exercicio059")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series59")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=biceps+triceps, key="exercicio60")
+            segundo = st.selectbox("", options=biceps+triceps, key="exercicio060")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series60")
+
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
+    if st.session_state.get("CostasBiceps", True):
+        st.subheader("Costas + Bíceps",divider="gray")
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            primeiro = st.selectbox("Exercício 1", options= costas+biceps, key="exercicio61")
+            primeiro = st.selectbox("", options= costas+biceps, key="exercicio061")
+        with col2:
+            primeiro_series = st.selectbox("Séries/Repetições", options=series, key="series61")
+        
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 2", options=costas+biceps, key="exercicio62")
+            segundo = st.selectbox("", options=costas+biceps, key="exercicio062")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series62")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 3", options=costas+biceps, key="exercicio63")
+            segundo = st.selectbox("", options=costas+biceps, key="exercicio063")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series63")
+
+        col1,col2 = st.columns([1, 0.25])
+        with col1:
+            segundo = st.selectbox("Exercício 4", options=costas+biceps, key="exercicio64")
+            segundo = st.selectbox("", options=costas+biceps, key="exercicio064")
+        with col2:
+            segundo_series = st.selectbox("Séries/Repetições", options=series, key="series64")
+## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##  ## ===========  ## ## ===========  ##
     dados_treino2 = {
         "exercicio1": st.session_state.get("exercicio1"),
         "series1": st.session_state.get("series1"),
@@ -1004,6 +1246,70 @@ if st.session_state.get("Biset", True):
         "series31": st.session_state.get("series31"),
         "exercicio32": st.session_state.get("exercicio32"),
         "series32": st.session_state.get("series32"),
+        "exercicio33": st.session_state.get("exercicio33"),
+        "series33": st.session_state.get("series33"),
+        "exercicio34": st.session_state.get("exercicio34"),
+        "series34": st.session_state.get("series34"),
+        "exercicio35": st.session_state.get("exercicio35"),
+        "series35": st.session_state.get("series35"),
+        "exercicio36": st.session_state.get("exercicio36"),
+        "series36": st.session_state.get("series36"),
+        "exercicio37": st.session_state.get("exercicio37"),
+        "series37": st.session_state.get("series37"),
+        "exercicio38": st.session_state.get("exercicio38"),
+        "series38": st.session_state.get("series38"),
+        "exercicio39": st.session_state.get("exercicio39"),
+        "series39": st.session_state.get("series39"),
+        "exercicio40": st.session_state.get("exercicio40"),
+        "series40": st.session_state.get("series40"),
+        "exercicio41": st.session_state.get("exercicio41"),
+        "series41": st.session_state.get("series41"),
+        "exercicio42": st.session_state.get("exercicio42"),
+        "series42": st.session_state.get("series42"),
+        "exercicio43": st.session_state.get("exercicio43"),
+        "series43": st.session_state.get("series43"),
+        "exercicio44": st.session_state.get("exercicio44"),
+        "series44": st.session_state.get("series44"),
+        "exercicio45": st.session_state.get("exercicio45"),
+        "series45": st.session_state.get("series45"),
+        "exercicio46": st.session_state.get("exercicio46"),
+        "series46": st.session_state.get("series46"),
+        "exercicio47": st.session_state.get("exercicio47"),
+        "series47": st.session_state.get("series47"),
+        "exercicio48": st.session_state.get("exercicio48"),
+        "series48": st.session_state.get("series48"),
+        "exercicio49": st.session_state.get("exercicio49"),
+        "series49": st.session_state.get("series49"),
+        "exercicio50": st.session_state.get("exercicio50"),
+        "series50": st.session_state.get("series50"),
+        "exercicio51": st.session_state.get("exercicio51"),
+        "series51": st.session_state.get("series51"),
+        "exercicio52": st.session_state.get("exercicio52"),
+        "series52": st.session_state.get("series52"),
+        "exercicio53": st.session_state.get("exercicio53"),
+        "series53": st.session_state.get("series53"),
+        "exercicio54": st.session_state.get("exercicio54"),
+        "series54": st.session_state.get("series54"),
+        "exercicio55": st.session_state.get("exercicio55"),
+        "series55": st.session_state.get("series55"),
+        "exercicio56": st.session_state.get("exercicio56"),
+        "series56": st.session_state.get("series56"),
+        "exercicio57": st.session_state.get("exercicio57"),
+        "series57": st.session_state.get("series57"),
+        "exercicio58": st.session_state.get("exercicio58"),
+        "series58": st.session_state.get("series58"),
+        "exercicio59": st.session_state.get("exercicio59"),
+        "series59": st.session_state.get("series59"),
+        "exercicio60": st.session_state.get("exercicio60"),
+        "series60": st.session_state.get("series60"),
+        "exercicio61": st.session_state.get("exercicio61"),
+        "series61": st.session_state.get("series61"),
+        "exercicio62": st.session_state.get("exercicio62"),
+        "series62": st.session_state.get("series62"),
+        "exercicio63": st.session_state.get("exercicio63"),
+        "series63": st.session_state.get("series63"),
+        "exercicio64": st.session_state.get("exercicio64"),
+        "series64": st.session_state.get("series64"),
 
         "exercicio01": st.session_state.get("exercicio01"),
         "exercicio02": st.session_state.get("exercicio02"),
@@ -1037,6 +1343,39 @@ if st.session_state.get("Biset", True):
         "exercicio030": st.session_state.get("exercicio030"),
         "exercicio031": st.session_state.get("exercicio031"),
         "exercicio032": st.session_state.get("exercicio032"),
+        "exercicio033": st.session_state.get("exercicio033"),
+        "exercicio034": st.session_state.get("exercicio034"),
+        "exercicio035": st.session_state.get("exercicio035"),
+        "exercicio036": st.session_state.get("exercicio036"),
+        "exercicio037": st.session_state.get("exercicio037"),
+        "exercicio038": st.session_state.get("exercicio038"),
+        "exercicio039": st.session_state.get("exercicio039"),
+        "exercicio040": st.session_state.get("exercicio040"),
+        "exercicio041": st.session_state.get("exercicio041"),
+        "exercicio042": st.session_state.get("exercicio042"),
+        "exercicio043": st.session_state.get("exercicio043"),
+        "exercicio044": st.session_state.get("exercicio044"),
+        "exercicio045": st.session_state.get("exercicio045"),
+        "exercicio046": st.session_state.get("exercicio046"),
+        "exercicio047": st.session_state.get("exercicio047"),
+        "exercicio048": st.session_state.get("exercicio048"),
+        "exercicio049": st.session_state.get("exercicio049"),
+        "exercicio050": st.session_state.get("exercicio050"),
+        "exercicio051": st.session_state.get("exercicio051"),
+        "exercicio052": st.session_state.get("exercicio052"),
+        "exercicio053": st.session_state.get("exercicio053"),
+        "exercicio054": st.session_state.get("exercicio054"),
+        "exercicio055": st.session_state.get("exercicio055"),
+        "exercicio056": st.session_state.get("exercicio056"),
+        "exercicio057": st.session_state.get("exercicio057"),
+        "exercicio058": st.session_state.get("exercicio058"),
+        "exercicio059": st.session_state.get("exercicio059"),
+        "exercicio060": st.session_state.get("exercicio060"),
+        "exercicio061": st.session_state.get("exercicio061"),
+        "exercicio062": st.session_state.get("exercicio062"),
+        "exercicio063": st.session_state.get("exercicio063"),
+        "exercicio064": st.session_state.get("exercicio064"),
+
     }
     st.session_state["dados_treino"] = dados_treino2
 
@@ -1049,7 +1388,15 @@ if st.session_state.get("Biset", True):
         st.session_state.get("Ombros", True) or \
         st.session_state.get("Triceps", True) or \
         st.session_state.get("Biceps", True) or \
-        st.session_state.get("Gluteos", True):
+        st.session_state.get("Gluteos", True) or \
+        st.session_state.get("QuadricepsPosteriorCoxa", True) or \
+        st.session_state.get("PosteriorCoxaGluteos", True) or \
+        st.session_state.get("PeitoCostas", True) or \
+        st.session_state.get("PeitoOmbros", True) or \
+        st.session_state.get("PeitoTriceps", True) or \
+        st.session_state.get("OmbrosTriceps", True) or \
+        st.session_state.get("BicepsTriceps", True) or \
+        st.session_state.get("CostasBiceps", True):
         # Botão para gerar PDF
         if st.button("Gerar PDF"):
             from pdf import gerar_pdf2
@@ -1501,7 +1848,15 @@ if st.session_state.get("Triset", True):
         st.session_state.get("Ombros", True) or \
         st.session_state.get("Triceps", True) or \
         st.session_state.get("Biceps", True) or \
-        st.session_state.get("Gluteos", True):
+        st.session_state.get("Gluteos", True) or \
+        st.session_state.get("QuadricepsPosteriorCoxa", True) or \
+        st.session_state.get("PosteriorCoxaGluteos", True) or \
+        st.session_state.get("PeitoCostas", True) or \
+        st.session_state.get("PeitoOmbros", True) or \
+        st.session_state.get("PeitoTriceps", True) or \
+        st.session_state.get("OmbrosTriceps", True) or \
+        st.session_state.get("BicepsTriceps", True) or \
+        st.session_state.get("CostasBiceps", True):
         # Botão para gerar PDF
         if st.button("Gerar PDF"):
             from pdf import gerar_pdf3

@@ -116,7 +116,7 @@ def gerar_pdf2(dados_treino2):
         ("Quadriceps + Posterior de Coxa", "QuadricepsPosteriorCoxa", 32),
         ("Posterior de Coxa + Glúteos", "PosteriorCoxaGluteos", 36),
         ("Peito + Costas", "PeitoCostas", 40),
-        ("Peito + Ombro", "PeitoOmbro", 44),
+        ("Peito + Ombros", "PeitoOmbros", 44),
         ("Peito + Tríceps", "PeitoTriceps", 48),
         ("Ombro + Triceps", "OmbroTriceps", 52),
         ("Biceps + Tríceps", "BicepsTriceps", 56),
@@ -161,6 +161,9 @@ def gerar_pdf2(dados_treino2):
         font_exercicio = 14
     elif n_grupos == 6:
         font_titulo = 18
+        font_exercicio = 14
+    elif n_grupos == 7:
+        font_titulo = 16
         font_exercicio = 14
     else:
         font_titulo = 18
