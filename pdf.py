@@ -118,7 +118,7 @@ def gerar_pdf2(dados_treino2):
         ("Peito + Costas", "PeitoCostas", 40),
         ("Peito + Ombros", "PeitoOmbros", 44),
         ("Peito + Tríceps", "PeitoTriceps", 48),
-        ("Ombros + Triceps", "OmbroTriceps", 52),
+        ("Ombros + Triceps", "OmbrosTriceps", 52),
         ("Biceps + Tríceps", "BicepsTriceps", 56),
         ("Costas + Bíceps", "CostasBiceps", 60),
     ]
