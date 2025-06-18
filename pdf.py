@@ -109,7 +109,7 @@ def gerar_pdf2(dados_treino2):
         ("Posterior de Coxa ", "PosteriorCoxa", 4),
         ("Peito", "Peito", 8),
         ("Costas", "Costas", 12),
-        ("Ombro", "Ombros", 16),
+        ("Ombros", "Ombros", 16),
         ("Tríceps", "Triceps", 20),
         ("Bíceps", "Biceps", 24),
         ("glúteos", "Gluteos", 28),
