@@ -175,19 +175,19 @@ def gerar_pdf2(dados_treino2):
         x, y = posicoes[idx]
         pdf.setFont("Times-Bold", font_titulo)
         pdf.drawString(x, y, grupo)
-        y_ = y - 15  # Posição inicial para os exercícios
+        y_ = y - 20  # Posição inicial para os exercícios
         pdf.setFont("Times-Roman", font_exercicio)
         for i in range(inicio, inicio+4):
             exercicio = dados_treino2.get(f"exercicio{i+1}", "")
             series = dados_treino2.get(f"series{i+1}", "")
             pdf.drawString(x + 10, y_, f"{exercicio} - {series}")
-            y_ -= 10  # Espaço entre os exercícios
+            y_ -= 20  # Espaço entre os exercícios
 
             # Inclui o extra se existir
             exercicio_extra = dados_treino2.get(f"exercicio0{i+1}", "")
             if exercicio_extra:
                 pdf.drawString(x + 10, y_, f"{exercicio_extra}")
-                y_ -= 20  # Espaço extra para o extra
+                y_ -= 30  # Espaço extra para o extra
 
     pdf.save()
     buffer.seek(0)
